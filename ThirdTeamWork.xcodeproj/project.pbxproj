@@ -18,6 +18,7 @@
 		EA33E1FB26958E4800F85DF0 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1FA26958E4800F85DF0 /* CoordinatorDelegate.swift */; };
 		EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1FC26958E5300F85DF0 /* CoordinatorProtocol.swift */; };
 		EA33E1FF26958E6100F85DF0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1FE26958E6100F85DF0 /* Storyboarded.swift */; };
+		EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E20126959E2F00F85DF0 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EA33E1FA26958E4800F85DF0 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 		EA33E1FC26958E5300F85DF0 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		EA33E1FE26958E6100F85DF0 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		EA33E20126959E2F00F85DF0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		EA33E1F326958DFD00F85DF0 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EA33E20026959E1E00F85DF0 /* Managers */,
 				EA33E1F426958E1900F85DF0 /* Coordinator */,
 			);
 			path = Infrastructure;
@@ -160,6 +163,14 @@
 				EA33E1F626958E3000F85DF0 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		EA33E20026959E1E00F85DF0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E20126959E2F00F85DF0 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */,
 				EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */,
 				EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */,
 				EA33E1F726958E3000F85DF0 /* BaseViewController.swift in Sources */,
