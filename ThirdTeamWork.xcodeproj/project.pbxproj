@@ -16,6 +16,8 @@
 		DC5A995E2695C6300084E719 /* CountriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A995B2695C6300084E719 /* CountriesListViewModel.swift */; };
 		DC5A995F2695C6300084E719 /* CountriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A995C2695C6300084E719 /* CountriesDataSource.swift */; };
 		DC5A99602695C6300084E719 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A995D2695C6300084E719 /* CountryViewModel.swift */; };
+		DC5A99642695D1370084E719 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A99632695D1370084E719 /* MapViewController.swift */; };
+		DC5A99662695D1480084E719 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5A99652695D1480084E719 /* MapViewController.storyboard */; };
 		EA33E1D926958CCD00F85DF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1D826958CCD00F85DF0 /* AppDelegate.swift */; };
 		EA33E1DB26958CCD00F85DF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1DA26958CCD00F85DF0 /* SceneDelegate.swift */; };
 		EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1DC26958CCD00F85DF0 /* MainViewController.swift */; };
@@ -47,6 +49,8 @@
 		DC5A995B2695C6300084E719 /* CountriesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesListViewModel.swift; sourceTree = "<group>"; };
 		DC5A995C2695C6300084E719 /* CountriesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesDataSource.swift; sourceTree = "<group>"; };
 		DC5A995D2695C6300084E719 /* CountryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		DC5A99632695D1370084E719 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ThirdTeamWork/Presentation/Scenes/Home/MapViewController.swift; sourceTree = SOURCE_ROOT; };
+		DC5A99652695D1480084E719 /* MapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		EA33E1D526958CCD00F85DF0 /* ThirdTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA33E1D826958CCD00F85DF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA33E1DA26958CCD00F85DF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				DC5A99522695C5F30084E719 /* HomeCell */,
-				DC5A99582695C6140084E719 /* HomeViewController.storyboard */,
-				DC5A99572695C6140084E719 /* HomeViewController.swift */,
+				DC5A99612695D1000084E719 /* Home */,
+				DC5A99622695D1120084E719 /* Map */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +145,24 @@
 				DC5A99542695C6010084E719 /* HomeTableViewCell.xib */,
 			);
 			path = HomeCell;
+			sourceTree = "<group>";
+		};
+		DC5A99612695D1000084E719 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DC5A99582695C6140084E719 /* HomeViewController.storyboard */,
+				DC5A99572695C6140084E719 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DC5A99622695D1120084E719 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DC5A99632695D1370084E719 /* MapViewController.swift */,
+				DC5A99652695D1480084E719 /* MapViewController.storyboard */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		EA33E1CC26958CCD00F85DF0 = {
@@ -374,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC5A99662695D1480084E719 /* MapViewController.storyboard in Resources */,
 				EA33E2152695ADF300F85DF0 /* CountryCell.xib in Resources */,
 				EA33E1E526958CCD00F85DF0 /* LaunchScreen.storyboard in Resources */,
 				DC5A995A2695C6140084E719 /* HomeViewController.storyboard in Resources */,
@@ -402,6 +425,7 @@
 				EA33E1F726958E3000F85DF0 /* BaseViewController.swift in Sources */,
 				EA33E2142695ADF300F85DF0 /* CountryCell.swift in Sources */,
 				EA33E1F926958E3B00F85DF0 /* AppCoordinator.swift in Sources */,
+				DC5A99642695D1370084E719 /* MapViewController.swift in Sources */,
 				DC5A99482695C4860084E719 /* CountriesManager.swift in Sources */,
 				DC5A99602695C6300084E719 /* CountryViewModel.swift in Sources */,
 				EA33E1D926958CCD00F85DF0 /* AppDelegate.swift in Sources */,

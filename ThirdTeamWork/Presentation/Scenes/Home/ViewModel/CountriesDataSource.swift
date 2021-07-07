@@ -14,7 +14,9 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
     private var tableView: UITableView!
     private var viewModel: CountriesListViewModel!
     
-    private var filteredCountriesList = [CountryViewModel]()
+    var storyboard = UIStoryboard(name: "MapViewController", bundle: nil)
+    let navigationController = UINavigationController()
+    
     private var countriesList = [CountryViewModel]()
     
     init(with tableView: UITableView, viewModel: CountriesListViewModel) {
@@ -30,20 +32,20 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
     func refresh() {
         viewModel.getCountriesList { countries in
             self.countriesList.append(contentsOf: countries)
-            self.filteredCountriesList.append(contentsOf: countries)
             self.tableView.reloadData()
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredCountriesList.count
+        return countriesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(class: HomeTableViewCell.self, for: indexPath)
-        cell.configure(with: filteredCountriesList[indexPath.row])
+        cell.configure(with: countriesList[indexPath.row])
         return cell
     }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -54,7 +56,9 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
 
 extension CountriesDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        self.navigationController.pushViewController(vc, animated: true)
     }
 }
 

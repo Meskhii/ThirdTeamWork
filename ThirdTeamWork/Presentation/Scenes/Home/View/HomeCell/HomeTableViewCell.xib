@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lpt-iF-7LW">
-                        <rect key="frame" x="30" y="10" width="496" height="120"/>
+                        <rect key="frame" x="35" y="10" width="491" height="120"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-tD-AmO">
                                 <rect key="frame" x="0.0" y="0.0" width="195.5" height="55"/>
@@ -63,10 +63,13 @@
                         <state key="normal" image="map" catalog="system">
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                         </state>
+                        <connections>
+                            <action selector="onTapMap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xwh-dx-PWm"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="lpt-iF-7LW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="SyV-ek-8bP"/>
+                    <constraint firstItem="lpt-iF-7LW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="BNn-8y-gaC"/>
                     <constraint firstItem="lpt-iF-7LW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VnT-Cc-lIv"/>
                     <constraint firstAttribute="bottomMargin" secondItem="ijJ-bN-6lz" secondAttribute="bottom" constant="15" id="aFF-IT-HPf"/>
                     <constraint firstItem="ijJ-bN-6lz" firstAttribute="leading" secondItem="lpt-iF-7LW" secondAttribute="trailing" constant="20" id="dfc-rl-xL2"/>

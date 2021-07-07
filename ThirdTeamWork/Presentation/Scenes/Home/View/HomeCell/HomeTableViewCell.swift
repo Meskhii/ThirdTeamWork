@@ -6,12 +6,19 @@
 //
 
 import UIKit
+import MapKit
+
+protocol ClickDelegate {
+    func clicked(_ row: Int)
+}
 
 class HomeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var CountryNameLabel: UILabel!
     @IBOutlet weak var capitalNameLabel: UILabel!
-    
+
+    var storyboard = UIStoryboard(name: "MapViewController", bundle: nil)
+    let navigationController = UINavigationController()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,5 +36,17 @@ class HomeTableViewCell: UITableViewCell {
         CountryNameLabel.text = item.name
         capitalNameLabel.text = item.capital
     }
+    
+    
+    @IBAction func onTapMap(_ sender: UIButton) {
+        
+        
+        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        self.navigationController.pushViewController(vc, animated: true)
+        print("tapped")
+        
+        
+    }
+    
     
 }
