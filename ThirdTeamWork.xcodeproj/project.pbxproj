@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		DC5A99452695C4290084E719 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A99442695C4290084E719 /* Country.swift */; };
 		DC5A99482695C4860084E719 /* CountriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A99472695C4860084E719 /* CountriesManager.swift */; };
+		DC5A99552695C6010084E719 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A99532695C6010084E719 /* HomeTableViewCell.swift */; };
+		DC5A99562695C6010084E719 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5A99542695C6010084E719 /* HomeTableViewCell.xib */; };
+		DC5A99592695C6140084E719 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A99572695C6140084E719 /* HomeViewController.swift */; };
+		DC5A995A2695C6140084E719 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC5A99582695C6140084E719 /* HomeViewController.storyboard */; };
+		DC5A995E2695C6300084E719 /* CountriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A995B2695C6300084E719 /* CountriesListViewModel.swift */; };
+		DC5A995F2695C6300084E719 /* CountriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A995C2695C6300084E719 /* CountriesDataSource.swift */; };
+		DC5A99602695C6300084E719 /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5A995D2695C6300084E719 /* CountryViewModel.swift */; };
 		EA33E1D926958CCD00F85DF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1D826958CCD00F85DF0 /* AppDelegate.swift */; };
 		EA33E1DB26958CCD00F85DF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1DA26958CCD00F85DF0 /* SceneDelegate.swift */; };
 		EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1DC26958CCD00F85DF0 /* MainViewController.swift */; };
@@ -33,6 +40,13 @@
 /* Begin PBXFileReference section */
 		DC5A99442695C4290084E719 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		DC5A99472695C4860084E719 /* CountriesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesManager.swift; sourceTree = "<group>"; };
+		DC5A99532695C6010084E719 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DC5A99542695C6010084E719 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		DC5A99572695C6140084E719 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DC5A99582695C6140084E719 /* HomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		DC5A995B2695C6300084E719 /* CountriesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesListViewModel.swift; sourceTree = "<group>"; };
+		DC5A995C2695C6300084E719 /* CountriesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesDataSource.swift; sourceTree = "<group>"; };
+		DC5A995D2695C6300084E719 /* CountryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		EA33E1D526958CCD00F85DF0 /* ThirdTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA33E1D826958CCD00F85DF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA33E1DA26958CCD00F85DF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +105,44 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		DC5A994F2695C5B80084E719 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DC5A99502695C5DA0084E719 /* View */,
+				DC5A99512695C5E00084E719 /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DC5A99502695C5DA0084E719 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC5A99522695C5F30084E719 /* HomeCell */,
+				DC5A99582695C6140084E719 /* HomeViewController.storyboard */,
+				DC5A99572695C6140084E719 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC5A99512695C5E00084E719 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC5A995C2695C6300084E719 /* CountriesDataSource.swift */,
+				DC5A995B2695C6300084E719 /* CountriesListViewModel.swift */,
+				DC5A995D2695C6300084E719 /* CountryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC5A99522695C5F30084E719 /* HomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC5A99532695C6010084E719 /* HomeTableViewCell.swift */,
+				DC5A99542695C6010084E719 /* HomeTableViewCell.xib */,
+			);
+			path = HomeCell;
+			sourceTree = "<group>";
+		};
 		EA33E1CC26958CCD00F85DF0 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +193,7 @@
 		EA33E1EE26958D9E00F85DF0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DC5A994F2695C5B80084E719 /* Home */,
 				EA33E2032695A61B00F85DF0 /* SelectedCountries */,
 				EA33E1F526958E2200F85DF0 /* Base */,
 				EA33E1EF26958DA200F85DF0 /* Main */,
@@ -323,8 +376,10 @@
 			files = (
 				EA33E2152695ADF300F85DF0 /* CountryCell.xib in Resources */,
 				EA33E1E526958CCD00F85DF0 /* LaunchScreen.storyboard in Resources */,
+				DC5A995A2695C6140084E719 /* HomeViewController.storyboard in Resources */,
 				EA33E2082695A66200F85DF0 /* SelectedCountriesViewController.storyboard in Resources */,
 				EA33E1E226958CCD00F85DF0 /* Assets.xcassets in Resources */,
+				DC5A99562695C6010084E719 /* HomeTableViewCell.xib in Resources */,
 				EA33E1E026958CCD00F85DF0 /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,17 +395,22 @@
 				EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */,
 				EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */,
 				EA33E2112695ADDD00F85DF0 /* SelectedCountriesDataSource.swift in Sources */,
+				DC5A995E2695C6300084E719 /* CountriesListViewModel.swift in Sources */,
 				EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */,
+				DC5A99592695C6140084E719 /* HomeViewController.swift in Sources */,
+				DC5A995F2695C6300084E719 /* CountriesDataSource.swift in Sources */,
 				EA33E1F726958E3000F85DF0 /* BaseViewController.swift in Sources */,
 				EA33E2142695ADF300F85DF0 /* CountryCell.swift in Sources */,
 				EA33E1F926958E3B00F85DF0 /* AppCoordinator.swift in Sources */,
 				DC5A99482695C4860084E719 /* CountriesManager.swift in Sources */,
+				DC5A99602695C6300084E719 /* CountryViewModel.swift in Sources */,
 				EA33E1D926958CCD00F85DF0 /* AppDelegate.swift in Sources */,
 				EA33E20F2695AD1C00F85DF0 /* UITableViewCell+Extension.swift in Sources */,
 				EA33E1DB26958CCD00F85DF0 /* SceneDelegate.swift in Sources */,
 				EA33E1FB26958E4800F85DF0 /* CoordinatorDelegate.swift in Sources */,
 				EA33E2062695A65900F85DF0 /* SelectedCountriesViewController.swift in Sources */,
 				DC5A99452695C4290084E719 /* Country.swift in Sources */,
+				DC5A99552695C6010084E719 /* HomeTableViewCell.swift in Sources */,
 				EA33E1FF26958E6100F85DF0 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
