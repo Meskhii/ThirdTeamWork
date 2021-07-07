@@ -19,6 +19,13 @@
 		EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1FC26958E5300F85DF0 /* CoordinatorProtocol.swift */; };
 		EA33E1FF26958E6100F85DF0 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1FE26958E6100F85DF0 /* Storyboarded.swift */; };
 		EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E20126959E2F00F85DF0 /* NetworkManager.swift */; };
+		EA33E2062695A65900F85DF0 /* SelectedCountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E2052695A65900F85DF0 /* SelectedCountriesViewController.swift */; };
+		EA33E2082695A66200F85DF0 /* SelectedCountriesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA33E2072695A66200F85DF0 /* SelectedCountriesViewController.storyboard */; };
+		EA33E20D2695AD0A00F85DF0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E20C2695AD0A00F85DF0 /* UITableView+Extension.swift */; };
+		EA33E20F2695AD1C00F85DF0 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E20E2695AD1C00F85DF0 /* UITableViewCell+Extension.swift */; };
+		EA33E2112695ADDD00F85DF0 /* SelectedCountriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E2102695ADDD00F85DF0 /* SelectedCountriesDataSource.swift */; };
+		EA33E2142695ADF300F85DF0 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E2122695ADF300F85DF0 /* CountryCell.swift */; };
+		EA33E2152695ADF300F85DF0 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA33E2132695ADF300F85DF0 /* CountryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,13 @@
 		EA33E1FC26958E5300F85DF0 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		EA33E1FE26958E6100F85DF0 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		EA33E20126959E2F00F85DF0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EA33E2052695A65900F85DF0 /* SelectedCountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountriesViewController.swift; sourceTree = "<group>"; };
+		EA33E2072695A66200F85DF0 /* SelectedCountriesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedCountriesViewController.storyboard; sourceTree = "<group>"; };
+		EA33E20C2695AD0A00F85DF0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		EA33E20E2695AD1C00F85DF0 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		EA33E2102695ADDD00F85DF0 /* SelectedCountriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountriesDataSource.swift; sourceTree = "<group>"; };
+		EA33E2122695ADF300F85DF0 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		EA33E2132695ADF300F85DF0 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,7 @@
 		EA33E1EE26958D9E00F85DF0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EA33E2032695A61B00F85DF0 /* SelectedCountries */,
 				EA33E1F526958E2200F85DF0 /* Base */,
 				EA33E1EF26958DA200F85DF0 /* Main */,
 			);
@@ -140,6 +155,7 @@
 		EA33E1F326958DFD00F85DF0 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EA33E20B2695ACFA00F85DF0 /* Extension */,
 				EA33E20026959E1E00F85DF0 /* Managers */,
 				EA33E1F426958E1900F85DF0 /* Coordinator */,
 			);
@@ -171,6 +187,51 @@
 				EA33E20126959E2F00F85DF0 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		EA33E2032695A61B00F85DF0 /* SelectedCountries */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E2092695AAD400F85DF0 /* ViewModel */,
+				EA33E2042695A62900F85DF0 /* View */,
+			);
+			path = SelectedCountries;
+			sourceTree = "<group>";
+		};
+		EA33E2042695A62900F85DF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E20A2695AADD00F85DF0 /* CountryCell */,
+				EA33E2052695A65900F85DF0 /* SelectedCountriesViewController.swift */,
+				EA33E2072695A66200F85DF0 /* SelectedCountriesViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA33E2092695AAD400F85DF0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E2102695ADDD00F85DF0 /* SelectedCountriesDataSource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA33E20A2695AADD00F85DF0 /* CountryCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E2122695ADF300F85DF0 /* CountryCell.swift */,
+				EA33E2132695ADF300F85DF0 /* CountryCell.xib */,
+			);
+			path = CountryCell;
+			sourceTree = "<group>";
+		};
+		EA33E20B2695ACFA00F85DF0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E20C2695AD0A00F85DF0 /* UITableView+Extension.swift */,
+				EA33E20E2695AD1C00F85DF0 /* UITableViewCell+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA33E2152695ADF300F85DF0 /* CountryCell.xib in Resources */,
 				EA33E1E526958CCD00F85DF0 /* LaunchScreen.storyboard in Resources */,
+				EA33E2082695A66200F85DF0 /* SelectedCountriesViewController.storyboard in Resources */,
 				EA33E1E226958CCD00F85DF0 /* Assets.xcassets in Resources */,
 				EA33E1E026958CCD00F85DF0 /* MainViewController.storyboard in Resources */,
 			);
@@ -243,14 +306,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA33E20D2695AD0A00F85DF0 /* UITableView+Extension.swift in Sources */,
 				EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */,
 				EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */,
+				EA33E2112695ADDD00F85DF0 /* SelectedCountriesDataSource.swift in Sources */,
 				EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */,
 				EA33E1F726958E3000F85DF0 /* BaseViewController.swift in Sources */,
+				EA33E2142695ADF300F85DF0 /* CountryCell.swift in Sources */,
 				EA33E1F926958E3B00F85DF0 /* AppCoordinator.swift in Sources */,
 				EA33E1D926958CCD00F85DF0 /* AppDelegate.swift in Sources */,
+				EA33E20F2695AD1C00F85DF0 /* UITableViewCell+Extension.swift in Sources */,
 				EA33E1DB26958CCD00F85DF0 /* SceneDelegate.swift in Sources */,
 				EA33E1FB26958E4800F85DF0 /* CoordinatorDelegate.swift in Sources */,
+				EA33E2062695A65900F85DF0 /* SelectedCountriesViewController.swift in Sources */,
 				EA33E1FF26958E6100F85DF0 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
