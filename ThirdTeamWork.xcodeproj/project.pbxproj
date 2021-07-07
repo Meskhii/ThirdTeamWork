@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09D5B5F02696263800538152 /* UserLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D5B5EF2696263800538152 /* UserLocationViewController.swift */; };
+		09D5B5F22696265200538152 /* UserLocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09D5B5F12696265200538152 /* UserLocationViewController.storyboard */; };
+		09D5B5F526964BCE00538152 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D5B5F426964BCE00538152 /* LocationSearchTable.swift */; };
 		EA33E1D926958CCD00F85DF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1D826958CCD00F85DF0 /* AppDelegate.swift */; };
 		EA33E1DB26958CCD00F85DF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1DA26958CCD00F85DF0 /* SceneDelegate.swift */; };
 		EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1DC26958CCD00F85DF0 /* MainViewController.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09D5B5EF2696263800538152 /* UserLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationViewController.swift; sourceTree = "<group>"; };
+		09D5B5F12696265200538152 /* UserLocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserLocationViewController.storyboard; sourceTree = "<group>"; };
+		09D5B5F426964BCE00538152 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		EA33E1D526958CCD00F85DF0 /* ThirdTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA33E1D826958CCD00F85DF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA33E1DA26958CCD00F85DF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09D5B5ED2696260100538152 /* UserLocation */ = {
+			isa = PBXGroup;
+			children = (
+				09D5B5EE2696262200538152 /* View */,
+			);
+			path = UserLocation;
+			sourceTree = "<group>";
+		};
+		09D5B5EE2696262200538152 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				09D5B5F326964B9A00538152 /* TableViewController */,
+				09D5B5EF2696263800538152 /* UserLocationViewController.swift */,
+				09D5B5F12696265200538152 /* UserLocationViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		09D5B5F326964B9A00538152 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09D5B5F426964BCE00538152 /* LocationSearchTable.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
 		EA33E1CC26958CCD00F85DF0 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +149,7 @@
 		EA33E1EE26958D9E00F85DF0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				09D5B5ED2696260100538152 /* UserLocation */,
 				EA33E2162695BEEB00F85DF0 /* SelectedCountryOnMap */,
 				EA33E2032695A61B00F85DF0 /* SelectedCountries */,
 				EA33E1F526958E2200F85DF0 /* Base */,
@@ -327,6 +360,7 @@
 				EA33E2152695ADF300F85DF0 /* CountryCell.xib in Resources */,
 				EA33E1E526958CCD00F85DF0 /* LaunchScreen.storyboard in Resources */,
 				EA33E2082695A66200F85DF0 /* SelectedCountriesViewController.storyboard in Resources */,
+				09D5B5F22696265200538152 /* UserLocationViewController.storyboard in Resources */,
 				EA33E1E226958CCD00F85DF0 /* Assets.xcassets in Resources */,
 				EA33E1E026958CCD00F85DF0 /* MainViewController.storyboard in Resources */,
 				EA33E21B2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard in Resources */,
@@ -341,7 +375,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA33E2222695D4FE00F85DF0 /* PinAnnotation.swift in Sources */,
+				09D5B5F02696263800538152 /* UserLocationViewController.swift in Sources */,
 				EA33E20D2695AD0A00F85DF0 /* UITableView+Extension.swift in Sources */,
+				09D5B5F526964BCE00538152 /* LocationSearchTable.swift in Sources */,
 				EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */,
 				EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */,
 				EA33E2112695ADDD00F85DF0 /* SelectedCountriesDataSource.swift in Sources */,
@@ -503,6 +539,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XZ3GM4S56F;
 				INFOPLIST_FILE = "ThirdTeamWork/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,6 +558,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XZ3GM4S56F;
 				INFOPLIST_FILE = "ThirdTeamWork/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
