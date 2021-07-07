@@ -28,6 +28,7 @@
 		EA33E2152695ADF300F85DF0 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA33E2132695ADF300F85DF0 /* CountryCell.xib */; };
 		EA33E2192695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E2182695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift */; };
 		EA33E21B2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA33E21A2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard */; };
+		EA33E2222695D4FE00F85DF0 /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E2212695D4FE00F85DF0 /* PinAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		EA33E2132695ADF300F85DF0 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
 		EA33E2182695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountryOnMapViewController.swift; sourceTree = "<group>"; };
 		EA33E21A2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedCountryOnMapViewController.storyboard; sourceTree = "<group>"; };
+		EA33E2212695D4FE00F85DF0 /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		EA33E1F326958DFD00F85DF0 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				EA33E21E2695D17A00F85DF0 /* CostumViews */,
 				EA33E20B2695ACFA00F85DF0 /* Extension */,
 				EA33E20026959E1E00F85DF0 /* Managers */,
 				EA33E1F426958E1900F85DF0 /* Coordinator */,
@@ -256,6 +259,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EA33E21E2695D17A00F85DF0 /* CostumViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E2212695D4FE00F85DF0 /* PinAnnotation.swift */,
+			);
+			path = CostumViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA33E2222695D4FE00F85DF0 /* PinAnnotation.swift in Sources */,
 				EA33E20D2695AD0A00F85DF0 /* UITableView+Extension.swift in Sources */,
 				EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */,
 				EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */,

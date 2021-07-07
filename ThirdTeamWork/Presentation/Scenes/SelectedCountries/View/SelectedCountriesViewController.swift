@@ -26,7 +26,7 @@ class SelectedCountriesViewController: BaseViewController {
     }
     
     private func configureDataSource() {
-        selectedCountriesDataSource = SelectedCountriesDataSource(with: tableView, countries: countriesList)
+        selectedCountriesDataSource = SelectedCountriesDataSource(with: tableView, countries: countriesList, coordinator: coordinator!)
     }
 
 }
