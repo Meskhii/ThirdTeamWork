@@ -23,6 +23,7 @@ final class AppCoordinator: CoordinatorProtocol {
     func start() {
         let vc = MainViewController.instantiateFromStoryboard()
         vc.coordinator = self
+        navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
         
         window?.rootViewController = navigationController
