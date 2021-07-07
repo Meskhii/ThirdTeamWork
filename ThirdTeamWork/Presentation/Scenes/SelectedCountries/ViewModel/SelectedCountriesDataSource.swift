@@ -13,9 +13,10 @@ class SelectedCountriesDataSource: NSObject {
     // MARK: - Variables
     private var tableView: UITableView!
     private var countries = [String]()
+    private var coordinator: CoordinatorProtocol!
     
     // MARK: - Init
-    init(with tableView: UITableView, countries: [String]) {
+    init(with tableView: UITableView, countries: [String], coordinator: CoordinatorProtocol) {
         super.init()
         
         self.tableView = tableView
@@ -23,6 +24,7 @@ class SelectedCountriesDataSource: NSObject {
         self.tableView.delegate = self
 
         self.countries = countries
+        self.coordinator = coordinator
     }
     
 }
@@ -45,6 +47,6 @@ extension SelectedCountriesDataSource: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension SelectedCountriesDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        coordinator.navigateToSelectedCountryOnMap()
     }
 }
