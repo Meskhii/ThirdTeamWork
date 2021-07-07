@@ -26,6 +26,8 @@
 		EA33E2112695ADDD00F85DF0 /* SelectedCountriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E2102695ADDD00F85DF0 /* SelectedCountriesDataSource.swift */; };
 		EA33E2142695ADF300F85DF0 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E2122695ADF300F85DF0 /* CountryCell.swift */; };
 		EA33E2152695ADF300F85DF0 /* CountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA33E2132695ADF300F85DF0 /* CountryCell.xib */; };
+		EA33E2192695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E2182695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift */; };
+		EA33E21B2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA33E21A2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		EA33E2102695ADDD00F85DF0 /* SelectedCountriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountriesDataSource.swift; sourceTree = "<group>"; };
 		EA33E2122695ADF300F85DF0 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		EA33E2132695ADF300F85DF0 /* CountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCell.xib; sourceTree = "<group>"; };
+		EA33E2182695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountryOnMapViewController.swift; sourceTree = "<group>"; };
+		EA33E21A2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedCountryOnMapViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		EA33E1EE26958D9E00F85DF0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EA33E2162695BEEB00F85DF0 /* SelectedCountryOnMap */,
 				EA33E2032695A61B00F85DF0 /* SelectedCountries */,
 				EA33E1F526958E2200F85DF0 /* Base */,
 				EA33E1EF26958DA200F85DF0 /* Main */,
@@ -234,6 +239,23 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		EA33E2162695BEEB00F85DF0 /* SelectedCountryOnMap */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E2172695BEF400F85DF0 /* View */,
+			);
+			path = SelectedCountryOnMap;
+			sourceTree = "<group>";
+		};
+		EA33E2172695BEF400F85DF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA33E2182695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift */,
+				EA33E21A2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -296,6 +318,7 @@
 				EA33E2082695A66200F85DF0 /* SelectedCountriesViewController.storyboard in Resources */,
 				EA33E1E226958CCD00F85DF0 /* Assets.xcassets in Resources */,
 				EA33E1E026958CCD00F85DF0 /* MainViewController.storyboard in Resources */,
+				EA33E21B2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +333,7 @@
 				EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */,
 				EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */,
 				EA33E2112695ADDD00F85DF0 /* SelectedCountriesDataSource.swift in Sources */,
+				EA33E2192695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift in Sources */,
 				EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */,
 				EA33E1F726958E3000F85DF0 /* BaseViewController.swift in Sources */,
 				EA33E2142695ADF300F85DF0 /* CountryCell.swift in Sources */,
