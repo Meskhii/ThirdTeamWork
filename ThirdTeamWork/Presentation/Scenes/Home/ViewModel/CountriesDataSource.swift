@@ -40,7 +40,7 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.deque(HomeTableViewCell.self, for: indexPath)
+        let cell = tableView.deque(class: HomeTableViewCell.self, for: indexPath)
         cell.configure(with: filteredCountriesList[indexPath.row])
         return cell
     }
