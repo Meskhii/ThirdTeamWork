@@ -47,7 +47,7 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(class: HomeTableViewCell.self, for: indexPath)
-        cell.configure(with: countriesList[indexPath.row],coordinator: coordinator)
+        cell.configure(with: countriesList[indexPath.row], coordinator: coordinator)
         
         return cell
     }
@@ -62,8 +62,8 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
 
 extension CountriesDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        coordinator?.navigateTo()
+        coordinator?.navigateTo(with: countriesList[indexPath.row].capital)
+        refresh()
         
     }
 }

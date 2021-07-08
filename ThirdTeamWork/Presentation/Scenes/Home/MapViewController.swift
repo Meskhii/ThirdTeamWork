@@ -14,7 +14,7 @@ class MapViewController: BaseViewController, MKMapViewDelegate {
     @IBOutlet weak var backButton: UIButton!
     
     var countries: CountryViewModel?
-    var country: Country?
+    var capital = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,10 @@ class MapViewController: BaseViewController, MKMapViewDelegate {
         mapView.showsCompass = true
         
         backButton.layer.cornerRadius = 50 / 2
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         locator()
     }
@@ -33,7 +37,7 @@ class MapViewController: BaseViewController, MKMapViewDelegate {
         
         let geoCoder = CLGeocoder()
         
-        geoCoder.geocodeAddressString(country?.capital ?? "") { (placemarks, error) in
+        geoCoder.geocodeAddressString(capital) { (placemarks, error) in
             
             if let error = error {
                 
@@ -46,7 +50,7 @@ class MapViewController: BaseViewController, MKMapViewDelegate {
                 let placemark = placemarks[0]
                 
                 let annotation = MKPointAnnotation()
-                annotation.title = self.country?.capital
+                annotation.title = self.capital
                 
                 if let location = placemark.location {
                     annotation.coordinate = location.coordinate
@@ -56,8 +60,8 @@ class MapViewController: BaseViewController, MKMapViewDelegate {
                 }
             }
         }
-        
     }
+    
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
