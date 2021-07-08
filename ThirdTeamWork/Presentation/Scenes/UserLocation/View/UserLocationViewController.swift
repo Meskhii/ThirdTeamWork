@@ -9,44 +9,67 @@ import UIKit
 import CoreLocation
 import MapKit
 
-protocol HandleMapSearch {
-    func dropPinZoomIn(placemark:MKPlacemark)
-}
 
-class UserLocationViewController: BaseViewController {
+
+class UserLocationViewController: BaseViewController, UIGestureRecognizerDelegate {
     
     var locationManager: CLLocationManager?
+    var destinationAnnotation: MKPointAnnotation!
+    var currentCoordinate: CLLocation?
+    var destinationCoordinate: CLLocation?
+    
     @IBOutlet var mapView: MKMapView!
-    
-    var selectedPin:MKPlacemark? = nil
-    
-    var resultSearchController : UISearchController? = nil
+    @IBOutlet weak var distanceLabel: UILabel!
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
-        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
-        resultSearchController?.searchResultsUpdater = locationSearchTable
-        
-        let searchBar = resultSearchController!.searchBar
-        searchBar.sizeToFit()
-        searchBar.placeholder = "Search for places"
-        navigationItem.searchController = resultSearchController
-        
-       
-        
-        resultSearchController?.hidesNavigationBarDuringPresentation = false
-        resultSearchController?.obscuresBackgroundDuringPresentation = true
-        definesPresentationContext = true
-        
-        locationSearchTable.mapView = mapView
-        locationSearchTable.handleMapSearchDelegate = self
-     let initalLocation = CLLocation(latitude: 40.7128, longitude: 74.0060)
-       mapView.centerTolocation(initalLocation)
+        addGestureRecognizerOnMap()
+        destinationAnnotation = MKPointAnnotation()
+
+      //  let initalLocation = CLLocation(latitude: 40.7128, longitude: 74.0060)
+       // mapView.centerTolocation(initalLocation)
+       // currentCoordinate = initalLocation
         locationManager = CLLocationManager()
         locationManager?.requestAlwaysAuthorization()
         locationManager?.delegate = self
     }
+    
+    func addGestureRecognizerOnMap(){
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(handleTap))
+        gestureRecognizer.delegate = self
+        mapView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc func handleTap(gestureRecognizer: UITapGestureRecognizer) {
+        mapView.removeAnnotation(destinationAnnotation)
+        
+        let location = gestureRecognizer.location(in: mapView)
+        let coordinate = mapView.convert(location, toCoordinateFrom: mapView)
+        
+        destinationCoordinate = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        destinationAnnotation.coordinate = coordinate
+        destinationAnnotation.title = "Destination"
+        mapView.addAnnotation(destinationAnnotation)
+        
+            calculateDistance()
+    }
+    
+    func calculateDistance(){
+        guard let currentCoordinate = currentCoordinate else { return }
+        guard let destinationCoordinate = destinationCoordinate else { return }
+        
+        let distanceInMeters = currentCoordinate.distance(from: destinationCoordinate)
+        let result = round(distanceInMeters * 100) / 100.0
+        
+        distanceLabel.text = "\(result)M"
+    }
+    
+    @IBAction func onCalculate(_ sender: Any) {
+        calculateDistance()
+    }
+    
+    
     
 }
 
@@ -70,6 +93,7 @@ extension UserLocationViewController : CLLocationManagerDelegate {
         guard let location = locations.last else {return}
         
         print("Lat: \(location.coordinate.latitude) :: Lng: \(location.coordinate.longitude)")
+        currentCoordinate = location
         mapView.centerTolocation(location)
     }
 
@@ -90,22 +114,4 @@ private extension MKMapView {
     }
 }
 
-extension UserLocationViewController: HandleMapSearch {
-    func dropPinZoomIn(placemark:MKPlacemark){
-        // cache the pin
-        selectedPin = placemark
-        // clear existing pins
-        mapView.removeAnnotations(mapView.annotations)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = placemark.coordinate
-        annotation.title = placemark.name
-        if let city = placemark.locality,
-        let state = placemark.administrativeArea {
-            annotation.subtitle = "\(city) \(state)"
-        }
-        mapView.addAnnotation(annotation)
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
-        mapView.setRegion(region, animated: true)
-    }
-}
+
