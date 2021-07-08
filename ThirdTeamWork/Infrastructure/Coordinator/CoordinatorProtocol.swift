@@ -15,4 +15,5 @@ protocol CoordinatorProtocol: AnyObject {
     func navigateToSelectedCountries()
     func navigateToSelectedCountryOnMap()
     func popViewController()
+    func navigateToSignUpPage()
 }

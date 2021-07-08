@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0485B4922697035700243C9D /* LogInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0485B4912697035700243C9D /* LogInViewController.storyboard */; };
+		0485B4982697042700243C9D /* CountryPinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485B4972697042700243C9D /* CountryPinsViewController.swift */; };
+		0485B49B2697043000243C9D /* CountryPinsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0485B49A2697043000243C9D /* CountryPinsViewController.storyboard */; };
+		0485B4A1269705C700243C9D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485B4A0269705C700243C9D /* LogInViewController.swift */; };
+		0485B4A42697065F00243C9D /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0485B4A32697065F00243C9D /* SignUpViewController.storyboard */; };
+		0485B4A72697068000243C9D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485B4A62697068000243C9D /* SignUpViewController.swift */; };
+		0485B4AB26970CD700243C9D /* CountriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485B4AA26970CD700243C9D /* CountriesManager.swift */; };
+		0485B4B126970D0600243C9D /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485B4B026970D0600243C9D /* Country.swift */; };
 		EA33E1D926958CCD00F85DF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1D826958CCD00F85DF0 /* AppDelegate.swift */; };
 		EA33E1DB26958CCD00F85DF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1DA26958CCD00F85DF0 /* SceneDelegate.swift */; };
 		EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33E1DC26958CCD00F85DF0 /* MainViewController.swift */; };
@@ -32,6 +40,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0485B4912697035700243C9D /* LogInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInViewController.storyboard; sourceTree = "<group>"; };
+		0485B4972697042700243C9D /* CountryPinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPinsViewController.swift; sourceTree = "<group>"; };
+		0485B49A2697043000243C9D /* CountryPinsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CountryPinsViewController.storyboard; sourceTree = "<group>"; };
+		0485B4A0269705C700243C9D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		0485B4A32697065F00243C9D /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
+		0485B4A62697068000243C9D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0485B4AA26970CD700243C9D /* CountriesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesManager.swift; sourceTree = "<group>"; };
+		0485B4B026970D0600243C9D /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		EA33E1D526958CCD00F85DF0 /* ThirdTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA33E1D826958CCD00F85DF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA33E1DA26958CCD00F85DF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +85,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0485B4832697024B00243C9D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				0485B4A32697065F00243C9D /* SignUpViewController.storyboard */,
+				0485B4A62697068000243C9D /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		0485B48C2697031800243C9D /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				0485B496269703E500243C9D /* CountryPins */,
+				0485B4942697037600243C9D /* LogIn */,
+				0485B4832697024B00243C9D /* SignUp */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		0485B4942697037600243C9D /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				0485B4912697035700243C9D /* LogInViewController.storyboard */,
+				0485B4A0269705C700243C9D /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		0485B496269703E500243C9D /* CountryPins */ = {
+			isa = PBXGroup;
+			children = (
+				0485B4972697042700243C9D /* CountryPinsViewController.swift */,
+				0485B49A2697043000243C9D /* CountryPinsViewController.storyboard */,
+			);
+			path = CountryPins;
+			sourceTree = "<group>";
+		};
+		0485B4A926970CB700243C9D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0485B4AA26970CD700243C9D /* CountriesManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0485B4AE26970CF800243C9D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0485B4AF26970CFC00243C9D /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0485B4AF26970CFC00243C9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0485B4B026970D0600243C9D /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EA33E1CC26958CCD00F85DF0 = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +165,9 @@
 		EA33E1D726958CCD00F85DF0 /* ThirdTeamWork */ = {
 			isa = PBXGroup;
 			children = (
+				0485B4A926970CB700243C9D /* API */,
 				EA33E1EC26958D8600F85DF0 /* App */,
+				0485B4AE26970CF800243C9D /* Domain */,
 				EA33E1F126958DAF00F85DF0 /* Resources */,
 				EA33E1F326958DFD00F85DF0 /* Infrastructure */,
 				EA33E1ED26958D8E00F85DF0 /* Presentation */,
@@ -117,6 +196,7 @@
 		EA33E1EE26958D9E00F85DF0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0485B48C2697031800243C9D /* Registration */,
 				EA33E2162695BEEB00F85DF0 /* SelectedCountryOnMap */,
 				EA33E2032695A61B00F85DF0 /* SelectedCountries */,
 				EA33E1F526958E2200F85DF0 /* Base */,
@@ -326,10 +406,13 @@
 			files = (
 				EA33E2152695ADF300F85DF0 /* CountryCell.xib in Resources */,
 				EA33E1E526958CCD00F85DF0 /* LaunchScreen.storyboard in Resources */,
+				0485B4A42697065F00243C9D /* SignUpViewController.storyboard in Resources */,
 				EA33E2082695A66200F85DF0 /* SelectedCountriesViewController.storyboard in Resources */,
 				EA33E1E226958CCD00F85DF0 /* Assets.xcassets in Resources */,
+				0485B4922697035700243C9D /* LogInViewController.storyboard in Resources */,
 				EA33E1E026958CCD00F85DF0 /* MainViewController.storyboard in Resources */,
 				EA33E21B2695BF2800F85DF0 /* SelectedCountryOnMapViewController.storyboard in Resources */,
+				0485B49B2697043000243C9D /* CountryPinsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +425,14 @@
 			files = (
 				EA33E2222695D4FE00F85DF0 /* PinAnnotation.swift in Sources */,
 				EA33E20D2695AD0A00F85DF0 /* UITableView+Extension.swift in Sources */,
+				0485B4A1269705C700243C9D /* LogInViewController.swift in Sources */,
 				EA33E20226959E2F00F85DF0 /* NetworkManager.swift in Sources */,
 				EA33E1FD26958E5300F85DF0 /* CoordinatorProtocol.swift in Sources */,
 				EA33E2112695ADDD00F85DF0 /* SelectedCountriesDataSource.swift in Sources */,
+				0485B4982697042700243C9D /* CountryPinsViewController.swift in Sources */,
+				0485B4B126970D0600243C9D /* Country.swift in Sources */,
+				0485B4A72697068000243C9D /* SignUpViewController.swift in Sources */,
+				0485B4AB26970CD700243C9D /* CountriesManager.swift in Sources */,
 				EA33E2192695BF1C00F85DF0 /* SelectedCountryOnMapViewController.swift in Sources */,
 				EA33E1DD26958CCD00F85DF0 /* MainViewController.swift in Sources */,
 				EA33E1F726958E3000F85DF0 /* BaseViewController.swift in Sources */,
@@ -504,6 +592,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ThirdTeamWork/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,6 +611,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "ThirdTeamWork/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

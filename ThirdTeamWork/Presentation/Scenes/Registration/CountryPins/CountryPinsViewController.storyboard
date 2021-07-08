@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Country Pins View Controller-->
+        <scene sceneID="nus-yD-gje">
+            <objects>
+                <viewController storyboardIdentifier="CountryPinsViewController" id="GWk-ZQ-cfw" customClass="CountryPinsViewController" customModule="ThirdTeamWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jVm-mc-ggO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7ri-Kb-HhN">
+                                <rect key="frame" x="0.0" y="84" width="414" height="680"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="680" id="1EG-4U-Kzh"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrH-He-In4">
+                                <rect key="frame" x="24" y="784" width="366" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WUD-Ko-X4b"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneBtn:" destination="GWk-ZQ-cfw" eventType="touchUpInside" id="jGP-mg-PJ4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SmV-LY-H7g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7ri-Kb-HhN" firstAttribute="trailing" secondItem="SmV-LY-H7g" secondAttribute="trailing" id="4Hx-9R-5WH"/>
+                            <constraint firstItem="7ri-Kb-HhN" firstAttribute="top" secondItem="SmV-LY-H7g" secondAttribute="top" constant="40" id="KO2-gh-65y"/>
+                            <constraint firstItem="SmV-LY-H7g" firstAttribute="trailing" secondItem="BrH-He-In4" secondAttribute="trailing" constant="24" id="Neb-xC-zUm"/>
+                            <constraint firstItem="BrH-He-In4" firstAttribute="top" secondItem="7ri-Kb-HhN" secondAttribute="bottom" constant="20" id="Q3R-cS-r7K"/>
+                            <constraint firstItem="BrH-He-In4" firstAttribute="leading" secondItem="SmV-LY-H7g" secondAttribute="leading" constant="24" id="QSO-yG-yJ4"/>
+                            <constraint firstItem="7ri-Kb-HhN" firstAttribute="leading" secondItem="SmV-LY-H7g" secondAttribute="leading" id="tU2-c6-EFI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countriesMapView" destination="7ri-Kb-HhN" id="REw-MK-Htp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhn-j1-Lvi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1834.7826086956522" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

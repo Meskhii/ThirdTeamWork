@@ -21,13 +21,19 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let vc = MainViewController.instantiateFromStoryboard()
+        let vc = LogInViewController.instantiateFromStoryboard()
         vc.coordinator = self
         navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+    func navigateToSignUpPage() {
+        let vc = SignUpViewController.instantiateFromStoryboard()
+        vc.coordinator = self
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func navigateToSelectedCountries() {
