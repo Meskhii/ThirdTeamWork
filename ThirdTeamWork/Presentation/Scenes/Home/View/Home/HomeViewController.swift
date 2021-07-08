@@ -37,7 +37,7 @@ class HomeViewController: BaseViewController {
     private func configureViewModel() {
         countriesManager = CountriesManager()
         viewModel = CountriesListViewModel(with: countriesManager)
-        dataSource = CountriesDataSource(with: tableView, viewModel: viewModel as! CountriesListViewModel)
+        dataSource = CountriesDataSource(with: tableView, viewModel: viewModel as! CountriesListViewModel, coordinator: coordinator!)
     }
     
 }

@@ -19,6 +19,19 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7U9-89-3FU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umx-Gy-a6w">
+                                <rect key="frame" x="314" y="762" width="50" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IH9-Mh-8FM"/>
+                                    <constraint firstAttribute="width" constant="50" id="gME-xj-WT9"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.uturn.left" catalog="system"/>
+                                <connections>
+                                    <action selector="OnTapBack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xwh-IG-Hhm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -26,10 +39,13 @@
                             <constraint firstItem="7U9-89-3FU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="4DQ-MN-Mv2"/>
                             <constraint firstAttribute="bottom" secondItem="7U9-89-3FU" secondAttribute="bottom" id="Hi1-Yc-oUf"/>
                             <constraint firstItem="7U9-89-3FU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bZM-0o-1TK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Umx-Gy-a6w" secondAttribute="trailing" constant="50" id="ett-GH-kC2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Umx-Gy-a6w" secondAttribute="bottom" constant="50" id="sPL-Hi-tF4"/>
                             <constraint firstItem="7U9-89-3FU" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xmE-qm-zVK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Umx-Gy-a6w" id="mEZ-9R-knn"/>
                         <outlet property="mapView" destination="7U9-89-3FU" id="ao2-vR-zVt"/>
                     </connections>
                 </viewController>
@@ -39,6 +55,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.uturn.left" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class CountriesDataSource: NSObject, UITableViewDataSource {
     
@@ -13,13 +14,16 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
     
     private var tableView: UITableView!
     private var viewModel: CountriesListViewModel!
+    private var coordinator: CoordinatorProtocol!
     
     var storyboard = UIStoryboard(name: "MapViewController", bundle: nil)
     let navigationController = UINavigationController()
     
     private var countriesList = [CountryViewModel]()
     
-    init(with tableView: UITableView, viewModel: CountriesListViewModel) {
+    var mapView: MKMapView?
+    
+    init(with tableView: UITableView, viewModel: CountriesListViewModel, coordinator: CoordinatorProtocol) {
         super.init()
         
         self.tableView = tableView
@@ -27,6 +31,7 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
         self.tableView.delegate = self
         
         self.viewModel = viewModel
+        self.coordinator = coordinator
     }
     
     func refresh() {
@@ -42,14 +47,15 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(class: HomeTableViewCell.self, for: indexPath)
-        cell.configure(with: countriesList[indexPath.row])
+        cell.configure(with: countriesList[indexPath.row],coordinator: coordinator)
+        
         return cell
     }
 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 100
+        return 250
         
     }
 }
@@ -57,8 +63,8 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
 extension CountriesDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        self.navigationController.pushViewController(vc, animated: true)
+        coordinator?.navigateTo()
+        
     }
 }
 

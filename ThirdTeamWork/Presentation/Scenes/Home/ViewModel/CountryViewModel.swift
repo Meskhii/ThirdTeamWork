@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct CountryViewModel {
     
@@ -23,8 +24,15 @@ struct CountryViewModel {
         country.capital ?? ""
     }
     
-    var coordinatrs: String {
+    var latitude: Double {
         
-        "Lat: \((country.latlng ?? [])[0]) Lng: \((country.latlng ?? [])[1])"
+        Double("\((country.latlng ?? [])[0])") ?? 0.0
+        
+    }
+    
+    var longitude: Double {
+        
+        Double("\((country.latlng ?? [])[1])") ?? 0.0
+        
     }
 }

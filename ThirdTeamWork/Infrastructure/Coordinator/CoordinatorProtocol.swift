@@ -13,4 +13,6 @@ protocol CoordinatorProtocol: AnyObject {
     
     func start()
     func popViewController()
+    func navigateTo()
+    
 }

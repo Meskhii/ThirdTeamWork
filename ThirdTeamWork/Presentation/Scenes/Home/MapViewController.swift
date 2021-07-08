@@ -8,25 +8,86 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: BaseViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var backButton: UIButton!
+    
+    var countries: CountryViewModel?
+    var country: Country?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        mapView.delegate = self
+        mapView.showsTraffic = true
+        mapView.showsScale = true
+        mapView.showsCompass = true
+        
+        backButton.layer.cornerRadius = 50 / 2
+        
+        locator()
+    }
+    
+    func locator() {
+        
+        let geoCoder = CLGeocoder()
+        
+        geoCoder.geocodeAddressString(country?.capital ?? "") { (placemarks, error) in
+            
+            if let error = error {
+                
+                print(error)
+                return
+            }
+            
+            if let placemarks = placemarks {
+                
+                let placemark = placemarks[0]
+                
+                let annotation = MKPointAnnotation()
+                annotation.title = self.country?.capital
+                
+                if let location = placemark.location {
+                    annotation.coordinate = location.coordinate
+                    
+                    self.mapView.showAnnotations([annotation], animated: true)
+                    self.mapView.selectAnnotation(annotation, animated: true)
+                }
+            }
+        }
+        
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        let identifier = "MyMarker"
+        
+        if annotation.isKind(of: MKUserLocation.self) {
+            
+            return nil
+        }
+        
+        var annotationView: MKMarkerAnnotationView? = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        
+        if annotationView == nil {
+            
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+        }
+        
+        annotationView?.glyphText = "🚩"
+        annotationView?.markerTintColor = .red
+        
+        return annotationView
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func OnTapBack(_ sender: Any) {
+        
+        coordinator?.popViewController()
+        
     }
-    */
-
+    
 }
+

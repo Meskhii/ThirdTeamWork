@@ -8,17 +8,13 @@
 import UIKit
 import MapKit
 
-protocol ClickDelegate {
-    func clicked(_ row: Int)
-}
-
 class HomeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var CountryNameLabel: UILabel!
     @IBOutlet weak var capitalNameLabel: UILabel!
-
-    var storyboard = UIStoryboard(name: "MapViewController", bundle: nil)
-    let navigationController = UINavigationController()
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var coordinator: CoordinatorProtocol?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,25 +23,46 @@ class HomeTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
-    func configure(with item: CountryViewModel) {
+    func configureMap(with item: CountryViewModel, coordinator: CoordinatorProtocol) {
+        self.coordinator = coordinator
+    }
+    
+    func configure(with item: CountryViewModel, coordinator: CoordinatorProtocol) {
+        
+        let geoCoder = CLGeocoder()
+        let location = item.capital
         
         CountryNameLabel.text = item.name
         capitalNameLabel.text = item.capital
-    }
-    
-    
-    @IBAction func onTapMap(_ sender: UIButton) {
+
+        geoCoder.geocodeAddressString(location) { (placemarks, error) in
+            
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            if let placemarks = placemarks {
+                
+                let placemark = placemarks[0]
+                
+                let annotation = MKPointAnnotation()
+                
+                if let location = placemark.location {
+                    
+                    annotation.coordinate = location.coordinate
+                    self.mapView?.addAnnotation(annotation)
+                    
+                    let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 250, longitudinalMeters: 250)
+                    self.mapView?.setRegion(region, animated: false)
+                }
+            }
+        }
         
-        
-        let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        self.navigationController.pushViewController(vc, animated: true)
-        print("tapped")
-        
-        
+        self.coordinator = coordinator
     }
     
     
