@@ -29,6 +29,8 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
         self.tableView = tableView
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.allowsMultipleSelection = true
+        self.tableView.allowsMultipleSelectionDuringEditing = true
         
         self.viewModel = viewModel
         self.coordinator = coordinator
@@ -62,9 +64,16 @@ class CountriesDataSource: NSObject, UITableViewDataSource {
 
 extension CountriesDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+//        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        
         coordinator?.navigateTo(with: countriesList[indexPath.row].capital)
         refresh()
         
     }
+//
+//    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        tableView.cellForRow(at: indexPath)?.accessoryType = .none
+//    }
 }
 
