@@ -41,6 +41,7 @@ class UserLocationViewController: BaseViewController {
         
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
+     let initalLocation = CLLocation(latitude: 40.7128, longitude: 74.0060)
        mapView.centerTolocation(initalLocation)
         locationManager = CLLocationManager()
         locationManager?.requestAlwaysAuthorization()
